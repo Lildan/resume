@@ -68,6 +68,13 @@
   }
 }
 
+\newcommand{\resumePositionSummary}[1]{
+  \item\small{
+    {#1 \vspace{-8pt}}
+  }
+}
+
+
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
@@ -123,10 +130,16 @@
 
     \resumeSubheading
       {Senior Software Engineer}{Jan 2022 -- Present}
-      {\href{https://dashfinancial.com/}{\underline{Dash Financial Technologies}}}{London, United Kingdom}
+      {\href{https://dashfinancial.com/}{\underline{Dash Financial Technologies}}}{Remote, United Kingdom}
+      \resumePositionSummary{Order Management System for institutional options traders.}
 
       \resumeItemListStart
-        \resumeItem{Developed a REST API using FastAPI and PostgreSQL to store data from learning management systems}
+        \resumeItem{Creator and owner of authentication and authorization components of the system. \\
+        Developed workflows for login, MFA, password recovery, user onboarding, access and permissions management etc. \\
+        Implemented single-sing-on via SAML integration for enterprise clients.}
+        \resumeItem{Parallelized workflows in core order processing module which increased throughput by 30\% per instance.}
+        \resumeItem{Enhanced real-time client updates through WebSockets during demanding workflows by implementing aggregation, throttling, and parallel processing techniques for event streams, resulting in a shift from seconds to subseconds p99\textsuperscript{th} latencies.}
+        \resumeItem{Designed and implemented users and orders audit trail system which enabled thorough inspection of user actions in the system and their effects on orders lifecycle.}
       \resumeItemListEnd
       
 % -----------Multiple Positions Heading-----------
@@ -142,47 +155,60 @@
     \resumeSubheading
       {Senior Software Engineer}{Aug 2020 --  Jan 2022}
       {\href{https://everymatrix.com/}{\underline{EveryMatrix}}}{Lviv, Ukraine}
+
+      \resumePositionSummary{B2B SaaS platform for online gambling and betting.}
+
       \resumeItemListStart
-        \resumeItem{Communicate with managers to set up campus computers used on campus}
-    \resumeItemListEnd
+        \resumeItem{Direct communication with clients during expansion into one of the biggest of European gambling markets. Translating legislative requirements into technical design.}
+        \resumeItem{Contributed to platform's architecture committee, authored and reviewed multiple ADRs, RFCs, and tech design docs.}
+        \resumeItem{Designed and executed product-wide technical solutions: research, PoC, single-service integration, "How to" docs, and cross-team knowledge sharing.}
+        \resumeItem{Leveraged Kubernetes, Kafka, Istio, Kiali, and Argo CD to transform outdated monolithic architecture into a resilient, scalable event-driven microservices platform.}
+      \resumeItemListEnd
 
     \resumeSubheading
       {Senior Software Engineer}{Nov 2019 -- July 2020}
       {\href{https://www.populusfinancial.com/}{\underline{Populous Financial Group}} contractor through \href{https://eleks.com/}{\underline{ELEKS}}}{Lviv, Ukraine}
+      \resumePositionSummary{Developed back-end of modern mobile banking application.}
       \resumeItemListStart
-        \resumeItem{Explored methods to generate video game dungeons based off of \emph{The Legend of Zelda}}
+        \resumeItem{Work in fast moving startup-like environment.}
+        \resumeItem{Building best possible solution with limited time and dev resources.}
       \resumeItemListEnd
 
       \resumeSubheading
       {Software Engineer}{Apr 2017 -- Nov 2019}
       {\href{https://www.solarwinds.com/}{\underline{SolarWinds}} contractor through \href{https://www.softserveinc.com/en-us}{\underline{SoftServe}}}{Lviv, Ukraine}
+      \resumePositionSummary{Solution for enterprise IT infrastructure management and monitoring.}
+      
       \resumeItemListStart
-        \resumeItem{Explored methods to generate video game dungeons based off of \emph{The Legend of Zelda}}
+        \resumeItem{Member of the core platform team focused on build pipeline, installation, configuration and update process of the solution.}
+        \resumeItem{Accelerated the average build and test cycle time from 90 to 45 minutes by strategically decomposing the project into smaller modules which allowed to parallelize the build process.}
+        \resumeItem{Reduced average size of files downloaded by installer by 30\% by downloading only required modules.}
+        \resumeItem{Reduced downtime during major upgrades from hours to tens of minutes with features like background download and parallelized modules configuration.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
 
 %-----------PROJECTS-----------
-\section{Projects}
-    \resumeSubHeadingListStart
-      \resumeProjectHeading
-          {\textbf{Gitlytics} $|$ \emph{Python, Flask, React, PostgreSQL, Docker}}{June 2020 -- Present}
-          \resumeItemListStart
-            \resumeItem{Developed a full-stack web application using with Flask serving a REST API with React as the frontend}
-            \resumeItem{Implemented GitHub OAuth to get data from user’s repositories}
-            \resumeItem{Visualized GitHub data to show collaboration}
-            \resumeItem{Used Celery and Redis for asynchronous tasks}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Simple Paintball} $|$ \emph{Spigot API, Java, Maven, TravisCI, Git}}{May 2018 -- May 2020}
-          \resumeItemListStart
-            \resumeItem{Developed a Minecraft server plugin to entertain kids during free time for a previous job}
-            \resumeItem{Published plugin to websites gaining 2K+ downloads and an average 4.5/5-star review}
-            \resumeItem{Implemented continuous delivery using TravisCI to build the plugin upon new a release}
-            \resumeItem{Collaborated with Minecraft server administrators to suggest features and get feedback about the plugin}
-          \resumeItemListEnd
-    \resumeSubHeadingListEnd
+%\section{Projects}
+%    \resumeSubHeadingListStart
+%      \resumeProjectHeading
+%          {\textbf{Gitlytics} $|$ \emph{Python, Flask, React, PostgreSQL, Docker}}{June 2020 -- Present}
+%          \resumeItemListStart
+%            \resumeItem{Developed a full-stack web application using with Flask serving a REST API with React as the frontend}
+%            \resumeItem{Implemented GitHub OAuth to get data from user’s repositories}
+%            \resumeItem{Visualized GitHub data to show collaboration}
+%            \resumeItem{Used Celery and Redis for asynchronous tasks}
+%          \resumeItemListEnd
+%      \resumeProjectHeading
+%          {\textbf{Simple Paintball} $|$ \emph{Spigot API, Java, Maven, TravisCI, Git}}{May 2018 -- May 2020}
+%          \resumeItemListStart
+%            \resumeItem{Developed a Minecraft server plugin to entertain kids during free time for a previous job}
+%            \resumeItem{Published plugin to websites gaining 2K+ downloads and an average 4.5/5-star review}
+%            \resumeItem{Implemented continuous delivery using TravisCI to build the plugin upon new a release}
+%            \resumeItem{Collaborated with Minecraft server administrators to suggest features and get feedback about the plugin}
+%          \resumeItemListEnd
+%    \resumeSubHeadingListEnd
 
 
 %-----------EDUCATION-----------
@@ -195,16 +221,20 @@
 
 %
 %-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills}
+\section{Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Java, Python, C/C++, SQL (Postgres), JavaScript, HTML/CSS, R} \\
-     \textbf{Frameworks}{: React, Node.js, Flask, JUnit, WordPress, Material-UI, FastAPI} \\
-     \textbf{Developer Tools}{: Git, Docker, TravisCI, Google Cloud Platform, VS Code, Visual Studio, PyCharm, IntelliJ, Eclipse} \\
-     \textbf{Libraries}{: pandas, NumPy, Matplotlib}
+     \textbf{English}{ - full working proficiency} \\
+     \textbf{German}{ - intermediate.} \\
+
+     \textbf{Programming languages}{: C\#, SQL (TSQL, Postgres), Python, Rust (as a hobby)} \\
+     ASP .Net Core, AWS, Cloud, Redis, RabbitMQ, Docker, Kubernetes, Kafka, Istio, service mesh,
+     unit testing, integration testing, OOP, microservices, event-driven, distributed systems, CI/CD, Git, 
+     REST API, algorithms, Linux, architecture \\
+     \href{https://www.credly.com/earner/earned/badge/667372fc-1f37-4743-8fe2-60b88c371f6e}{\underline{AWS Certified Solutions Architect - Associate}} \\
+     \href{https://www.credential.net/ca157eb4-f685-43ed-a368-1d3c0944dde1}{\underline{Confluent Certified Developer for Apache Kafka}} \\
+     \href{https://www.credly.com/badges/3649b5ba-fcf4-4a2b-a32a-0c798421e6ba}{\underline{Certified Kubernetes Application Developer}}
     }}
  \end{itemize}
-
-
 %-------------------------------------------
 \end{document}
